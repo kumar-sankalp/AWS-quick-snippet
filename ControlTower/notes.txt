@@ -1,1 +1,30 @@
 
+AWS Control Tower offers a straightforward way to set up and govern an AWS multi-account environment, following prescriptive best practices. AWS Control Tower orchestrates the capabilities of several other AWS services, including AWS Organizations, AWS Service Catalog, and AWS IAM Identity Center, to build a landing zone in less than an hour. Resources are set up and managed on your behalf.
+
+AWS Control Tower is built on top of trusted and reliable AWS services including AWS Service Catalog, AWS IAM Identity Center, and AWS Organizations
+
+
+Features : 
+Landing zone – A landing zone is a well-architected, multi-account environment that's based on security and compliance best practices. It is the enterprise-wide container that holds all of your organizational units (OUs), accounts, users, and other resources
+
+Controls – A control (sometimes called a guardrail) is a high-level rule that provides ongoing governance for your overall AWS environment. It's expressed in plain language. Three kinds of controls exist: preventive, detective, and proactive. Three categories of guidance apply to controls: mandatory, strongly recommended, or elective. 
+
+Account Factory – An Account Factory is a configurable account template that helps to standardize the provisioning of new accounts with pre-approved account configurations. AWS Control Tower offers a built-in Account Factory that helps automate the account provisioning workflow.
+
+-AWS Control Tower automates account deployment and enrollment by means of an Account Factory  which is built as an abstraction on top of provisioned products in AWS Service Catalog.
+
+Dashboard – The dashboard offers continuous oversight of your landing zone to your team of central cloud administrators. Use the dashboard to see provisioned accounts across your enterprise, controls enabled for policy enforcement, controls enabled for continuous detection of policy non-conformance, and noncompliant resources organized by accounts and OU.
+
+The structure of a landing zone in AWS Control Tower is as follows:
+
+Root – The parent that contains all other OUs in your landing zone.
+
+Security OU – This OU contains the Log Archive and Audit accounts. These accounts often are referred to as shared accounts. When you launch your landing zone, you can choose customized names for these shared accounts, and you have the option to bring existing AWS accounts into AWS Control Tower for security and logging. However, these cannot be renamed later, and existing accounts cannot be added for security and logging after initial launch.
+
+Sandbox OU – The Sandbox OU is created when you launch your landing zone, if you enable it. This and other registered OUs contain the enrolled accounts that your users work with to perform their AWS workloads.
+
+IAM Identity Center directory – This directory houses your IAM Identity Center users. It defines the scope of permissions for each IAM Identity Center user.
+
+IAM Identity Center users – These are the identities that your users can assume to perform their AWS workloads in your landing zone.
+
+
